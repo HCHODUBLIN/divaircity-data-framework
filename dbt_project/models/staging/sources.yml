@@ -4,7 +4,7 @@ sources:
   - name: bronze
     description: "Raw data ingested from city data sources, sensors, and surveys"
     database: "{% if target.type == 'snowflake' %}divaircity{% endif %}"
-    schema: bronze
+    schema: "{% if target.type == 'duckdb' %}main_bronze{% else %}bronze{% endif %}"
 
     tables:
       # =============================================
