@@ -1,0 +1,90 @@
+version: 2
+
+sources:
+  - name: bronze
+    description: "Raw data ingested from city data sources, sensors, and surveys"
+    database: divaircity
+    schema: bronze
+
+    tables:
+      # =============================================
+      # GEOSPATIAL BOUNDARIES
+      # =============================================
+      - name: raw_countries
+        description: "Country reference data from EU registries"
+      - name: raw_cities
+        description: "City (ADMIN_DIV_1) data from project partners"
+      - name: raw_boroughs
+        description: "Borough (ADMIN_DIV_2) data from city administrations"
+      - name: raw_neighbourhoods
+        description: "Neighbourhood (ADMIN_DIV_3) data from city administrations"
+      - name: raw_locations
+        description: "Physical locations of sensors, NBS, and buildings"
+
+      # =============================================
+      # AGENTS
+      # =============================================
+      - name: raw_communities
+        description: "Community groups with 6+1 diversity classifications"
+      - name: raw_organisations
+        description: "Partner organisations and local authorities"
+      - name: raw_persons
+        description: "Anonymised participant records (no PII)"
+
+      # =============================================
+      # CO-CREATION GOVERNANCE
+      # =============================================
+      - name: raw_plans
+        description: "Urban action plans from city partners"
+      - name: raw_objectives
+        description: "Plan objectives"
+      - name: raw_phases
+        description: "Co-creation phases within plans"
+      - name: raw_engagement_tools
+        description: "Tools used to collect citizen data (surveys, apps, sensors)"
+      - name: raw_events
+        description: "Co-creation events (workshops, meetings, educational)"
+      - name: raw_decisions
+        description: "Decisions made at events"
+
+      # =============================================
+      # CITY OBJECTS
+      # =============================================
+      - name: raw_nbs_projects
+        description: "Nature-Based Solution implementations"
+      - name: raw_sensors
+        description: "Environmental sensors deployed across cities"
+      - name: raw_buildings
+        description: "Buildings for NBS proximity analysis"
+      - name: raw_campaigns
+        description: "Policy campaigns and interventions"
+
+      # =============================================
+      # ECONOMIC & METRICS
+      # =============================================
+      - name: raw_metrics
+        description: "Metric definitions (KPIs, indicators)"
+      - name: raw_resources
+        description: "Financial resources allocated to plans"
+
+      # =============================================
+      # SOCIAL METRICS & SURVEYS
+      # =============================================
+      - name: raw_public_statistics
+        description: "Demographics, economics, and health statistics at neighbourhood level"
+      - name: raw_surveys
+        description: "Survey metadata"
+      - name: raw_citizen_responses
+        description: "Citizen-generated data from engagement tools"
+      - name: raw_panas_scores
+        description: "PANAS mood assessment scores"
+
+      # =============================================
+      # FACT TABLES (RAW)
+      # =============================================
+      - name: raw_sensor_measurements
+        description: "Time-series sensor readings with route tracking"
+      - name: raw_event_participations
+        description: "Event participation records"
+      - name: raw_survey_responses
+        description: "Survey response analysis with sentiment"

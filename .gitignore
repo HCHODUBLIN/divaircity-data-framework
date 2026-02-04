@@ -1,0 +1,26 @@
+# Project documents (confidential/internal)
+docs/project/
+
+# Raw data (large files, keep local only)
+data/raw/
+
+# OS files
+.DS_Store
+*/.DS_Store
+
+# dbt
+dbt_project/target/
+dbt_project/dbt_packages/
+dbt_project/logs/
+
+# Python
+__pycache__/
+*.py[cod]
+.env
+.venv/
+venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp

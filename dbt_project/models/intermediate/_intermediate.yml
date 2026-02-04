@@ -1,0 +1,42 @@
+version: 2
+
+models:
+  - name: int_sensor_with_geography
+    description: "Sensors enriched with full geographic hierarchy (denormalised snowflake schema)"
+    columns:
+      - name: sensor_id
+        tests:
+          - unique
+          - not_null
+
+  - name: int_event_with_geography
+    description: "Events enriched with plan, phase, tool, and geographic context"
+    columns:
+      - name: event_id
+        tests:
+          - unique
+          - not_null
+
+  - name: int_person_with_diversity
+    description: "Persons enriched with community 6+1 diversity attributes. GDPR: No PII, diversity at community level."
+    columns:
+      - name: person_id
+        tests:
+          - unique
+          - not_null
+
+  - name: int_nbs_with_geography
+    description: "NBS projects enriched with plan and geographic context"
+    columns:
+      - name: nbs_id
+        tests:
+          - unique
+          - not_null
+
+  - name: int_statistics_with_geography
+    description: "Public statistics enriched with geographic hierarchy for health-pollution analysis"
+    columns:
+      - name: stat_id
+        tests:
+          - unique
+          - not_null

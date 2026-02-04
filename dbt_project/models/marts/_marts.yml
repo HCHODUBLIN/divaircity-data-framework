@@ -1,0 +1,113 @@
+version: 2
+
+models:
+  - name: mart_air_quality
+    description: |
+      Wide table for air quality analysis with full geographic and NBS context.
+      Pre-joined for BI tools - no joins needed at query time.
+      Grain: one row per sensor measurement.
+    columns:
+      - name: measurement_id
+        tests:
+          - unique
+          - not_null
+      - name: metric_name
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['PM2.5', 'PM10', 'NO2', 'O3', 'CO', 'SO2', 'Temperature', 'Humidity']
+      - name: exceeds_eu_limit
+        description: "TRUE if measurement exceeds EU air quality directive 2008/50/EC limits"
+
+  - name: mart_participation_diversity
+    description: |
+      Co-creation participation with 6+1 diversity breakdown.
+      Supports DivAirCity diversity & inclusion monitoring.
+      Grain: one row per participant per event.
+    columns:
+      - name: participation_id
+        tests:
+          - unique
+          - not_null
+      - name: event_id
+        tests:
+          - not_null
+      - name: is_women
+        description: "6+1 diversity: Women"
+      - name: is_youth
+        description: "6+1 diversity: Youth"
+      - name: is_elders
+        description: "6+1 diversity: Elders"
+      - name: is_lgbtq
+        description: "6+1 diversity: LGBTQ+"
+      - name: is_ethnic_minority
+        description: "6+1 diversity: Ethnic minority"
+      - name: is_disability
+        description: "6+1 diversity: Disability"
+      - name: is_economically_disadvantaged
+        description: "6+1 diversity: Economically disadvantaged (+1 category)"
+
+  - name: mart_health_pollution
+    description: |
+      Health-pollution correlation analysis at neighbourhood level.
+      Combines public health statistics with aggregated air quality measurements.
+      Grain: one row per neighbourhood per reference year.
+    columns:
+      - name: admin_div_3_id
+        tests:
+          - not_null
+      - name: total_asthma_admissions
+        description: "Sum of all age group asthma admissions"
+      - name: days_exceeding_pm25_limit
+        description: "Number of days PM2.5 exceeded 25 µg/m³ (EU limit)"
+
+  - name: mart_nbs_impact
+    description: |
+      Nature-Based Solutions cost-benefit analysis.
+      Includes installation costs, CO2 sequestration, and environmental impact metrics.
+      Grain: one row per NBS project.
+    columns:
+      - name: nbs_id
+        tests:
+          - unique
+          - not_null
+      - name: cost_per_m2
+        description: "Installation cost divided by project area"
+      - name: cost_per_kg_co2
+        description: "Installation cost divided by annual CO2 sequestration potential"
+      - name: avg_pm25_reduction
+        description: "Average PM2.5 reduction (after - before) from linked sensors"
+
+  - name: mart_survey_sentiment
+    description: |
+      Survey response analysis with sentiment scoring.
+      Used for text analysis of citizen feedback.
+      Grain: one row per survey response.
+    columns:
+      - name: response_id
+        tests:
+          - unique
+          - not_null
+      - name: sentiment_score
+        description: "Sentiment score from -1.0 (negative) to 1.0 (positive)"
+      - name: sentiment_label
+        tests:
+          - accepted_values:
+              values: ['positive', 'negative', 'neutral', 'mixed']
+
+  - name: mart_panas_environmental
+    description: |
+      PANAS mood scores correlated with environmental conditions during walking routes.
+      Used for analysing environment-mood relationship.
+      Grain: one row per PANAS assessment.
+    columns:
+      - name: panas_id
+        tests:
+          - unique
+          - not_null
+      - name: pa_total
+        description: "Total Positive Affect score (sum of 5 items, range 5-25)"
+      - name: na_total
+        description: "Total Negative Affect score (sum of 5 items, range 5-25)"
+      - name: affect_balance
+        description: "Positive minus Negative affect (range -20 to +20)"

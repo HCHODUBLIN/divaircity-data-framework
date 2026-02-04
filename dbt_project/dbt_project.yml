@@ -1,0 +1,30 @@
+name: 'divaircity'
+version: '1.0.0'
+config-version: 2
+
+profile: 'divaircity'
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+analysis-paths: ["analyses"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  divaircity:
+    staging:
+      +materialized: view
+      +schema: silver
+      +tags: ['staging']
+    intermediate:
+      +materialized: table
+      +schema: silver
+      +tags: ['intermediate']
+    marts:
+      +materialized: table
+      +schema: gold
+      +tags: ['marts']
