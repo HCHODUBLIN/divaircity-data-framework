@@ -24,6 +24,25 @@ jobs:
       - name: Install dbt
         run: pip install dbt-core dbt-snowflake
 
+      - name: Create dummy profile for CI
+        run: |
+          mkdir -p ~/.dbt
+          cat <<EOF > ~/.dbt/profiles.yml
+          divaircity:
+            target: ci
+            outputs:
+              ci:
+                type: snowflake
+                account: dummy
+                user: dummy
+                password: dummy
+                role: dummy
+                database: dummy
+                warehouse: dummy
+                schema: dummy
+                threads: 1
+          EOF
+
       - name: Install dbt packages
         run: dbt deps
 
