@@ -1,0 +1,11 @@
+measurement_id,sensor_id,metric_id,person_id,track_id,collection_date,collection_time,value,unit,distance_m,latitude,longitude,status,description
+1,1,1,1,TRK001,2022-09-10,08:15:00,12.5,ug/m3,0,42.7186,12.1089,valid,Morning reading
+2,1,1,1,TRK001,2022-09-10,08:30:00,14.2,ug/m3,500,42.7190,12.1095,valid,Walking route
+3,7,1,7,TRK003,2022-09-10,09:00:00,18.5,ug/m3,0,51.5132,-0.1390,valid,Soho start
+4,7,1,7,TRK003,2022-09-10,09:15:00,22.8,ug/m3,300,51.5140,-0.1380,valid,Near traffic
+5,7,1,7,TRK003,2022-09-10,09:30:00,15.2,ug/m3,600,51.5150,-0.1370,valid,Park area
+6,9,1,8,TRK004,2022-09-15,09:00:00,25.5,ug/m3,0,51.5465,-0.0753,valid,Dalston start
+7,9,1,8,TRK004,2022-09-15,09:15:00,32.1,ug/m3,400,51.5470,-0.0745,valid,High street
+8,9,1,8,TRK004,2022-09-15,09:30:00,28.8,ug/m3,800,51.5480,-0.0738,valid,Near junction
+9,6,2,6,,2022-08-20,14:00:00,35.2,ug/m3,,51.5237,-0.1585,valid,Fixed sensor
+10,8,2,,,2022-09-15,12:00:00,28.5,ug/m3,,51.5303,-0.1240,valid,Station area

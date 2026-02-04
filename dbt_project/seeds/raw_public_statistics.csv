@@ -1,0 +1,11 @@
+stat_id,neighbourhood_id,stat_type,breakdown,source,reference_year,population,ethnic_asian_pct,ethnic_black_pct,ethnic_white_pct,ethnic_mixed_pct,ethnic_other_pct,household_income_avg,deprivation_index,asthma_admissions_0_14,asthma_admissions_15_64,asthma_admissions_65_plus,copd_admissions_65_plus
+1,1,demographics,age_gender,ISTAT,2021,5000,1.2,0.5,95.8,1.5,1.0,32000,3.2,12,25,18,22
+2,2,demographics,age_gender,Destatis,2021,25000,2.5,1.8,90.2,3.0,2.5,45000,2.1,30,55,35,40
+3,3,demographics,age_gender,DST,2021,45000,3.8,2.2,88.5,3.5,2.0,52000,1.8,45,80,50,55
+4,4,demographics,age_gender,INE,2021,18000,1.5,0.8,94.2,2.0,1.5,28000,4.5,20,35,25,30
+5,5,demographics,age_gender,INS,2021,35000,0.8,0.3,97.5,0.9,0.5,18000,6.2,55,95,70,85
+6,6,demographics,age_gender,ONS,2021,12000,15.5,8.2,55.8,10.5,10.0,85000,2.5,25,45,30,35
+7,7,demographics,age_gender,ONS,2021,8000,12.8,10.5,52.2,12.0,12.5,72000,3.8,18,32,22,28
+8,8,demographics,age_gender,ONS,2021,15000,8.5,18.2,48.5,15.3,9.5,55000,5.5,35,60,42,48
+9,9,demographics,age_gender,ONS,2021,22000,5.2,25.5,42.8,18.0,8.5,42000,6.8,48,85,58,65
+10,10,demographics,age_gender,ONS,2021,10000,10.5,12.8,55.2,14.0,7.5,65000,4.2,22,40,28,32

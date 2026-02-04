@@ -1,0 +1,9 @@
+phase_id,plan_id,phase_name,phase_order,building_type,total_households,description
+1,1,Assessment,1,residential,500,Initial air quality assessment
+2,1,Implementation,2,residential,500,Green space installation
+3,2,Baseline,1,mixed,2000,Carbon footprint baseline
+4,2,Intervention,2,mixed,2000,Carbon reduction measures
+5,3,Survey,1,commercial,1000,Mobility pattern survey
+6,3,Infrastructure,2,commercial,1000,Cycling infrastructure build
+7,6,Monitoring,1,residential,3000,Air quality monitoring setup
+8,6,Action,2,residential,3000,Clean air zone implementation

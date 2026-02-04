@@ -1,0 +1,11 @@
+location_id,neighbourhood_id,postcode,address,description,latitude,longitude
+1,1,05018,Via del Duomo 1,Orvieto Cathedral area,42.7186,12.1089
+2,2,14482,Karl-Marx-Strasse 5,Babelsberg park entrance,52.3906,13.0858
+3,3,8000,Store Torv 1,Aarhus city center,56.1572,10.2107
+4,4,12100,Plaza Mayor 10,Castellon main square,39.9864,-0.0513
+5,5,011171,Bulevardul Aviatorilor 50,Aviatorilor park,44.4547,26.0850
+6,6,W1U 4QW,Baker Street 221B,Marylebone residential,51.5237,-0.1585
+7,7,W1D 3QF,Carnaby Street 15,Soho commercial,51.5132,-0.1390
+8,8,N1C 4TB,Kings Cross Square,Kings Cross station area,51.5303,-0.1240
+9,9,E8 2LX,Dalston Lane 100,Dalston high street,51.5465,-0.0753
+10,10,EC2A 4BX,Shoreditch High St 50,Shoreditch tech hub,51.5235,-0.0773

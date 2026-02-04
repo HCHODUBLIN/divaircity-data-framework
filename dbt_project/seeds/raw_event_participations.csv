@@ -1,0 +1,11 @@
+participation_id,event_id,person_id,organisation_id,role
+1,1,1,1,participant
+2,1,9,7,facilitator
+3,2,2,2,participant
+4,2,10,7,researcher
+5,3,3,3,participant
+6,4,4,4,participant
+7,5,5,5,participant
+8,6,6,6,participant
+9,7,7,,volunteer
+10,8,8,,volunteer

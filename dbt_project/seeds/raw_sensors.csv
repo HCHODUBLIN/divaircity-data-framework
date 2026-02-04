@@ -1,0 +1,11 @@
+sensor_id,sensor_type,nbs_project_id,location_id,description
+1,air_quality,1,1,PM2.5 sensor Orvieto
+2,air_quality,2,2,NO2 sensor Potsdam
+3,temperature,3,3,Urban heat sensor Aarhus
+4,humidity,4,4,Coastal humidity Castellon
+5,air_quality,5,5,Multi-pollutant Bucharest
+6,air_quality,6,6,PM10 sensor Westminster
+7,air_quality,,7,Mobile sensor Soho
+8,air_quality,,8,Fixed sensor Kings Cross
+9,air_quality,,9,Community sensor Dalston
+10,air_quality,,10,Mobile sensor Shoreditch

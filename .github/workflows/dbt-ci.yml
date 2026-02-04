@@ -7,44 +7,33 @@ on:
     branches: [main]
 
 jobs:
-  dbt-compile:
+  dbt-test:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: dbt_project
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repo
+        uses: actions/checkout@v4
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
-      - name: Install dbt
-        run: pip install dbt-core dbt-snowflake
+      - name: Install dependencies
+        run: pip install dbt-duckdb
 
-      - name: Create dummy profile for CI
-        run: |
-          mkdir -p ~/.dbt
-          cat <<EOF > ~/.dbt/profiles.yml
-          divaircity:
-            target: ci
-            outputs:
-              ci:
-                type: snowflake
-                account: dummy
-                user: dummy
-                password: dummy
-                role: dummy
-                database: dummy
-                warehouse: dummy
-                schema: dummy
-                threads: 1
-          EOF
+      - name: Run dbt deps
+        working-directory: dbt_project
+        run: dbt deps --profiles-dir profiles/
 
-      - name: Install dbt packages
-        run: dbt deps
+      - name: Run dbt seed
+        working-directory: dbt_project
+        run: dbt seed --profiles-dir profiles/ --target ci
 
-      - name: Compile dbt models
-        run: dbt compile
+      - name: Run dbt run
+        working-directory: dbt_project
+        run: dbt run --profiles-dir profiles/ --target ci
+
+      - name: Run dbt test
+        working-directory: dbt_project
+        run: dbt test --profiles-dir profiles/ --target ci

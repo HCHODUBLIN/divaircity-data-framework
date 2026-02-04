@@ -3,7 +3,7 @@ version: 2
 sources:
   - name: bronze
     description: "Raw data ingested from city data sources, sensors, and surveys"
-    database: divaircity
+    database: "{{ 'divaircity' if target.type == 'snowflake' else target.database }}"
     schema: bronze
 
     tables:

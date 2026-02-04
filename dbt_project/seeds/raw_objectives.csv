@@ -1,0 +1,9 @@
+objective_id,objective_name,plan_id,description
+1,Reduce PM2.5 levels,1,Decrease particulate matter by 20%
+2,Increase green cover,1,Add 10ha of green spaces
+3,Carbon neutrality,2,Achieve net zero emissions
+4,Modal shift,3,30% increase in cycling
+5,Reduce NOx,3,Decrease nitrogen oxides by 25%
+6,Restore wetlands,4,Create 5ha coastal wetlands
+7,Plant urban forest,5,1000 new trees planted
+8,Clean air zones,6,Implement ULEZ expansion

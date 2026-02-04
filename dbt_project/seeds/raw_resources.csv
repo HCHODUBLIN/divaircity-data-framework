@@ -1,0 +1,9 @@
+resource_id,organisation_id,plan_id,description,amount,currency
+1,1,1,EU Horizon 2020 grant,500000,EUR
+2,2,2,Federal climate fund,750000,EUR
+3,3,3,Municipal transport budget,400000,DKK
+4,4,4,Regional environment fund,300000,EUR
+5,5,5,National greening programme,600000,RON
+6,6,6,TfL clean air fund,1000000,GBP
+7,7,1,Research contribution,50000,EUR
+8,8,6,Consortium support,200000,GBP

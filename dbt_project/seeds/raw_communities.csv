@@ -1,0 +1,9 @@
+community_id,community_type,geographical_scope,is_women,is_youth,is_elders,is_lgbtq,is_ethnic_minority,is_disability,is_economically_disadvantaged,admin_div_id,description
+1,residential,neighbourhood,false,false,false,false,false,false,false,1,General residents Orvieto
+2,residential,neighbourhood,true,false,false,false,false,false,false,2,Women group Potsdam
+3,residential,neighbourhood,false,true,false,false,false,false,false,3,Youth group Aarhus
+4,residential,neighbourhood,false,false,true,false,false,false,false,4,Elders group Castellon
+5,residential,neighbourhood,false,false,false,false,true,false,false,5,Ethnic minority Bucharest
+6,residential,neighbourhood,false,false,false,false,false,false,true,6,Low income Westminster
+7,residential,neighbourhood,false,false,false,true,false,false,false,7,LGBTQ community Soho
+8,residential,neighbourhood,false,false,false,false,false,true,false,8,Disability support Kings Cross

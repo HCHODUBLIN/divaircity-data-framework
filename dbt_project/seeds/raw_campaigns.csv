@@ -1,0 +1,7 @@
+campaign_id,campaign_name,campaign_type,borough_id,start_date,end_date,description,target_metric,target_reduction_pct
+1,Walk to School,behaviour_change,1,2022-09-01,2023-06-30,Encourage walking to school,car_trips,20
+2,Bike to Work,behaviour_change,2,2022-04-01,2022-10-31,Cycling commute campaign,car_trips,15
+3,Clean Air Day,awareness,3,2022-06-16,2022-06-16,Annual air quality awareness,awareness_score,30
+4,Plant a Tree,greening,4,2022-11-01,2023-03-31,Community tree planting,tree_count,100
+5,No Idling Zone,enforcement,6,2022-01-01,2023-12-31,Anti-idling enforcement,idle_time,50
+6,ULEZ Expansion,policy,7,2023-08-29,2024-08-29,Ultra Low Emission Zone,nox_emissions,25

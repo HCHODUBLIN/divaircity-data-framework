@@ -1,0 +1,9 @@
+building_id,location_id,building_type,building_use,year_built,floor_area_m2,nbs_proximity_pre,nbs_proximity_post
+1,1,residential,housing,1960,2500,500,50
+2,2,residential,housing,1975,3000,800,100
+3,3,commercial,office,1990,5000,300,75
+4,4,residential,housing,1985,2000,600,80
+5,5,residential,housing,1970,4000,1000,150
+6,6,residential,housing,1920,1800,400,50
+7,7,commercial,retail,1950,1200,350,40
+8,8,mixed,mixed_use,2010,6000,200,30

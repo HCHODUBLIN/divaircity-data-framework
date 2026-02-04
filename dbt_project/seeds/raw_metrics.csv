@@ -1,0 +1,11 @@
+metric_id,metric_name,metric_type,description
+1,PM2.5,air_quality,Fine particulate matter ug/m3
+2,PM10,air_quality,Coarse particulate matter ug/m3
+3,NO2,air_quality,Nitrogen dioxide ppb
+4,NOx,air_quality,Nitrogen oxides ppb
+5,O3,air_quality,Ozone ppb
+6,CO2,emissions,Carbon dioxide ppm
+7,Temperature,environmental,Ambient temperature celsius
+8,Humidity,environmental,Relative humidity percent
+9,Heart Rate,health,Beats per minute
+10,Steps,health,Step count

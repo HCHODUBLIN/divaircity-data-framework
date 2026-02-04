@@ -1,0 +1,9 @@
+response_id,survey_id,event_id,person_id,tool_id,response_date,key_phrases,sentiment_score,sentiment_label
+1,1,1,1,2,2022-03-15,air quality improved;park;green space,0.75,positive
+2,2,2,2,2,2022-04-20,public transport;climate;awareness,0.65,positive
+3,3,3,3,2,2022-05-10,cycling;infrastructure;needs work,0.35,mixed
+4,4,4,4,4,2022-06-01,wetland;beautiful;restoration,0.85,positive
+5,5,5,5,2,2022-07-15,trees;heat;summer,0.70,positive
+6,6,6,6,1,2022-08-20,pollution;health;concern,0.25,negative
+7,7,7,7,6,2022-09-10,walking;park;pleasant,0.80,positive
+8,8,8,8,1,2022-09-15,pollution;construction;spike,0.20,negative
