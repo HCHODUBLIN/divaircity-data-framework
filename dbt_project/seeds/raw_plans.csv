@@ -4,4 +4,4 @@ plan_id,plan_name,plan_type,organisation_id,scope,admin_div_id,focus,timescale_y
 3,Aarhus Mobility Plan,sustainable_transport,3,city,3,emissions,4,2022-03-01,2026-03-01,active,true,150,true,Reduced traffic emissions
 4,Castellon Coastal NBS,nature_based_solution,4,neighbourhood,4,biodiversity,3,2022-09-01,2025-09-01,active,true,80,false,Coastal ecosystem restoration
 5,Bucharest Urban Forest,urban_greening,5,city,5,urban_heat,5,2021-01-01,2026-01-01,active,true,500,true,Urban heat island reduction
-6,London Clean Air,air_quality,6,borough,6,air_quality,4,2022-04-01,2026-04-01,active,false,100,true,PM2.5 reduction
+6,London Clean Air,air_quality,6,regional,6,air_quality,4,2022-04-01,2026-04-01,active,false,100,true,PM2.5 reduction

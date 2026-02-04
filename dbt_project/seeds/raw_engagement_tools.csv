@@ -1,7 +1,7 @@
 tool_id,tool_name,tool_type,description
-1,Mobile Air Quality App,mobile_app,Citizen air quality reporting app
-2,Online Survey Platform,web_survey,Digital survey for citizen feedback
-3,Wearable Sensor Kit,wearable_sensor,Personal air quality monitors
-4,Community Workshop,in_person,Face-to-face engagement sessions
-5,PANAS Assessment,questionnaire,Mood assessment tool
-6,Walking Route Tracker,mobile_app,GPS tracking for walking routes
+1,Mobile Air Quality App,app,Citizen air quality reporting app
+2,Online Survey Platform,survey,Digital survey for citizen feedback
+3,Wearable Sensor Kit,sensor,Personal air quality monitors
+4,Community Workshop,workshop,Face-to-face engagement sessions
+5,PANAS Assessment,survey,Mood assessment tool
+6,Walking Route Tracker,app,GPS tracking for walking routes

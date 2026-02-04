@@ -1,9 +1,9 @@
 organisation_id,organisation_name,organisation_type,city_id,community_id
-1,Comune di Orvieto,local_authority,1,1
-2,Stadt Potsdam,local_authority,2,2
-3,Aarhus Kommune,local_authority,3,3
-4,Ajuntament de Castello,local_authority,4,4
-5,Primaria Bucuresti,local_authority,5,5
-6,Westminster City Council,local_authority,6,6
-7,EcoWise Research,research_partner,6,
-8,DivAirCity Consortium,project_partner,6,
+1,Comune di Orvieto,public,1,1
+2,Stadt Potsdam,public,2,2
+3,Aarhus Kommune,public,3,3
+4,Ajuntament de Castello,public,4,4
+5,Primaria Bucuresti,public,5,5
+6,Westminster City Council,public,6,6
+7,EcoWise Research,research,6,
+8,DivAirCity Consortium,research,6,

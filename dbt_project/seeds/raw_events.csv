@@ -2,8 +2,8 @@ event_id,event_type,neighbourhood_id,plan_id,phase_id,tool_id,event_date,event_t
 1,workshop,1,1,1,4,2022-03-15,14:00:00,Community Center Orvieto,Air quality awareness workshop,25
 2,workshop,2,2,3,4,2022-04-20,10:00:00,Rathaus Potsdam,Carbon footprint workshop,40
 3,meeting,3,3,5,2,2022-05-10,09:00:00,Aarhus City Hall,Mobility survey kickoff,30
-4,educational,4,4,1,4,2022-06-01,11:00:00,Casa de Cultura Castellon,Coastal ecosystem education,35
+4,education,4,4,1,4,2022-06-01,11:00:00,Casa de Cultura Castellon,Coastal ecosystem education,35
 5,workshop,5,5,1,4,2022-07-15,15:00:00,Primaria Sector 1,Urban forest planning,50
 6,meeting,6,6,7,4,2022-08-20,14:00:00,Westminster Council,Clean air zone consultation,45
-7,data_collection,7,6,8,3,2022-09-10,08:00:00,Soho Streets,Walking route data collection,20
-8,data_collection,9,6,8,1,2022-09-15,09:00:00,Dalston Junction,Air quality monitoring,15
+7,consultation,7,6,8,3,2022-09-10,08:00:00,Soho Streets,Walking route data collection,20
+8,consultation,9,6,8,1,2022-09-15,09:00:00,Dalston Junction,Air quality monitoring,15
