@@ -11,7 +11,7 @@ SELECT
     TRIM(description)                   AS description,
     TRIM(target_metric)                 AS target_metric,
     CAST(target_reduction_pct AS FLOAT) AS target_reduction_pct,
-    CURRENT_TIMESTAMP()                 AS loaded_at
+    {{ current_timestamp_utc() }}                 AS loaded_at
 
 FROM {{ source('bronze', 'raw_campaigns') }}
 WHERE campaign_id IS NOT NULL

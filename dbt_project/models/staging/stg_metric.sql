@@ -6,7 +6,7 @@ SELECT
     TRIM(metric_name)                   AS metric_name,
     TRIM(metric_type)                   AS metric_type,
     TRIM(description)                   AS description,
-    CURRENT_TIMESTAMP()                 AS loaded_at
+    {{ current_timestamp_utc() }}                 AS loaded_at
 
 FROM {{ source('bronze', 'raw_metrics') }}
 WHERE metric_id IS NOT NULL

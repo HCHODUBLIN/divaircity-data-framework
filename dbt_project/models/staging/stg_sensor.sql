@@ -7,7 +7,7 @@ SELECT
     CAST(nbs_project_id AS INT)         AS nbs_project_id,
     CAST(location_id AS INT)            AS location_id,
     TRIM(description)                   AS description,
-    CURRENT_TIMESTAMP()                 AS loaded_at
+    {{ current_timestamp_utc() }}                 AS loaded_at
 
 FROM {{ source('bronze', 'raw_sensors') }}
 WHERE sensor_id IS NOT NULL

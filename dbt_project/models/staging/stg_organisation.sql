@@ -7,7 +7,7 @@ SELECT
     TRIM(organisation_type)             AS organisation_type,
     CAST(city_id AS INT)                AS admin_div_1_id,
     CAST(community_id AS INT)           AS community_id,
-    CURRENT_TIMESTAMP()                 AS loaded_at
+    {{ current_timestamp_utc() }}                 AS loaded_at
 
 FROM {{ source('bronze', 'raw_organisations') }}
 WHERE organisation_id IS NOT NULL

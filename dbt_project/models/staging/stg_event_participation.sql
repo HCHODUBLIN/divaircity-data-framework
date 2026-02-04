@@ -8,7 +8,7 @@ SELECT
     CAST(person_id AS INT)              AS person_id,
     CAST(organisation_id AS INT)        AS organisation_id,
     TRIM(role)                          AS role,
-    CURRENT_TIMESTAMP()                 AS loaded_at
+    {{ current_timestamp_utc() }}                 AS loaded_at
 
 FROM {{ source('bronze', 'raw_event_participations') }}
 WHERE participation_id IS NOT NULL

@@ -6,7 +6,7 @@ SELECT
     CAST(person_id AS INT)              AS person_id,
     CAST(community_id AS INT)           AS community_id,
     CAST(organisation_id AS INT)        AS organisation_id,
-    CURRENT_TIMESTAMP()                 AS loaded_at
+    {{ current_timestamp_utc() }}                 AS loaded_at
 
 FROM {{ source('bronze', 'raw_persons') }}
 WHERE person_id IS NOT NULL

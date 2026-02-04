@@ -21,7 +21,7 @@ SELECT
     CAST(asthma_admissions_15_64 AS INT) AS asthma_admissions_15_64,
     CAST(asthma_admissions_65_plus AS INT) AS asthma_admissions_65_plus,
     CAST(copd_admissions_65_plus AS INT) AS copd_admissions_65_plus,
-    CURRENT_TIMESTAMP()                 AS loaded_at
+    {{ current_timestamp_utc() }}                 AS loaded_at
 
 FROM {{ source('bronze', 'raw_public_statistics') }}
 WHERE stat_id IS NOT NULL

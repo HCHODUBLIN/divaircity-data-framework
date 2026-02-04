@@ -15,7 +15,7 @@ SELECT
     CAST(maintenance_cost_annual AS FLOAT) AS maintenance_cost_annual,
     CAST(co2_sequestration_potential_kg AS FLOAT) AS co2_sequestration_potential_kg,
     CAST(normalised_cost_per_m2_co2 AS FLOAT) AS normalised_cost_per_m2_co2,
-    CURRENT_TIMESTAMP()                 AS loaded_at
+    {{ current_timestamp_utc() }}                 AS loaded_at
 
 FROM {{ source('bronze', 'raw_nbs_projects') }}
 WHERE nbs_id IS NOT NULL

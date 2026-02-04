@@ -15,7 +15,7 @@ SELECT
     COALESCE(CAST(is_economically_disadvantaged AS BOOLEAN), FALSE) AS is_economically_disadvantaged,
     CAST(admin_div_id AS INT)                       AS admin_div_id,
     TRIM(description)                               AS description,
-    CURRENT_TIMESTAMP()                             AS loaded_at
+    {{ current_timestamp_utc() }}                             AS loaded_at
 
 FROM {{ source('bronze', 'raw_communities') }}
 WHERE community_id IS NOT NULL

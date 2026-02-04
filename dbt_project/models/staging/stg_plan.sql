@@ -17,7 +17,7 @@ SELECT
     CAST(target_area_ha AS FLOAT)       AS target_area_ha,
     COALESCE(CAST(has_citizen_science AS BOOLEAN), FALSE) AS has_citizen_science,
     TRIM(outcomes)                      AS outcomes,
-    CURRENT_TIMESTAMP()                 AS loaded_at
+    {{ current_timestamp_utc() }}                 AS loaded_at
 
 FROM {{ source('bronze', 'raw_plans') }}
 WHERE plan_id IS NOT NULL

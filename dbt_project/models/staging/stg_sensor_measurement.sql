@@ -18,7 +18,7 @@ SELECT
     CAST(longitude AS FLOAT)            AS longitude,
     TRIM(status)                        AS status,
     TRIM(description)                   AS description,
-    CURRENT_TIMESTAMP()                 AS loaded_at
+    {{ current_timestamp_utc() }}                 AS loaded_at
 
 FROM {{ source('bronze', 'raw_sensor_measurements') }}
 WHERE measurement_id IS NOT NULL

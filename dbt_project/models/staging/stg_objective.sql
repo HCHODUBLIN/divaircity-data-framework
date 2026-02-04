@@ -6,7 +6,7 @@ SELECT
     TRIM(objective_name)                AS objective_name,
     CAST(plan_id AS INT)                AS plan_id,
     TRIM(description)                   AS description,
-    CURRENT_TIMESTAMP()                 AS loaded_at
+    {{ current_timestamp_utc() }}                 AS loaded_at
 
 FROM {{ source('bronze', 'raw_objectives') }}
 WHERE objective_id IS NOT NULL

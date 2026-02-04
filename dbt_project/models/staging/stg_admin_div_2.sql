@@ -7,7 +7,7 @@ SELECT
     TRIM(borough_name)                  AS borough_name,
     CAST(city_id AS INT)                AS admin_div_1_id,
     CAST(area AS FLOAT)                 AS area_km2,
-    CURRENT_TIMESTAMP()                 AS loaded_at
+    {{ current_timestamp_utc() }}                 AS loaded_at
 
 FROM {{ source('bronze', 'raw_boroughs') }}
 WHERE borough_id IS NOT NULL

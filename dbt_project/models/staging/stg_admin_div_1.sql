@@ -8,7 +8,7 @@ SELECT
     CAST(country_id AS INT)             AS country_id,
     CAST(population AS INT)             AS population,
     CAST(area AS FLOAT)                 AS area_km2,
-    CURRENT_TIMESTAMP()                 AS loaded_at
+    {{ current_timestamp_utc() }}                 AS loaded_at
 
 FROM {{ source('bronze', 'raw_cities') }}
 WHERE city_id IS NOT NULL

@@ -9,7 +9,7 @@ SELECT
     TRIM(building_type)                 AS building_type,
     CAST(total_households AS INT)       AS total_households,
     TRIM(description)                   AS description,
-    CURRENT_TIMESTAMP()                 AS loaded_at
+    {{ current_timestamp_utc() }}                 AS loaded_at
 
 FROM {{ source('bronze', 'raw_phases') }}
 WHERE phase_id IS NOT NULL

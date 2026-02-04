@@ -13,7 +13,7 @@ SELECT
     TRIM(event_location)                AS event_location,
     TRIM(description)                   AS description,
     CAST(total_participants AS INT)     AS total_participants,
-    CURRENT_TIMESTAMP()                 AS loaded_at
+    {{ current_timestamp_utc() }}                 AS loaded_at
 
 FROM {{ source('bronze', 'raw_events') }}
 WHERE event_id IS NOT NULL

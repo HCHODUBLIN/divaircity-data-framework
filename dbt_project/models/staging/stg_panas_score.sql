@@ -23,7 +23,7 @@ SELECT
     CAST(na_miserable AS INT)           AS na_miserable,
     CAST(na_sad AS INT)                 AS na_sad,
     CAST(na_total AS INT)               AS na_total,
-    CURRENT_TIMESTAMP()                 AS loaded_at
+    {{ current_timestamp_utc() }}                 AS loaded_at
 
 FROM {{ source('bronze', 'raw_panas_scores') }}
 WHERE panas_id IS NOT NULL

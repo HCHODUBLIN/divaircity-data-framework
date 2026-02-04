@@ -8,7 +8,7 @@ SELECT
     CAST(organisation_id AS INT)        AS organisation_id,
     CAST(event_id AS INT)               AS event_id,
     TRIM(description)                   AS description,
-    CURRENT_TIMESTAMP()                 AS loaded_at
+    {{ current_timestamp_utc() }}                 AS loaded_at
 
 FROM {{ source('bronze', 'raw_decisions') }}
 WHERE decision_id IS NOT NULL

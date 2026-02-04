@@ -9,7 +9,7 @@ SELECT
     TRIM(description)                   AS description,
     CAST(latitude AS FLOAT)             AS latitude,
     CAST(longitude AS FLOAT)            AS longitude,
-    CURRENT_TIMESTAMP()                 AS loaded_at
+    {{ current_timestamp_utc() }}                 AS loaded_at
 
 FROM {{ source('bronze', 'raw_locations') }}
 WHERE location_id IS NOT NULL

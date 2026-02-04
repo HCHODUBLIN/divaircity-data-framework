@@ -12,7 +12,7 @@ SELECT
     TRIM(key_phrases)                   AS key_phrases,
     CAST(sentiment_score AS FLOAT)      AS sentiment_score,
     TRIM(sentiment_label)               AS sentiment_label,
-    CURRENT_TIMESTAMP()                 AS loaded_at
+    {{ current_timestamp_utc() }}                 AS loaded_at
 
 FROM {{ source('bronze', 'raw_survey_responses') }}
 WHERE response_id IS NOT NULL

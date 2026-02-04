@@ -21,7 +21,7 @@ SELECT
     TRIM(UPPER(country_name))           AS country_name,
     CAST(population AS INT)             AS population,
     CAST(area AS FLOAT)                 AS area_km2,
-    CURRENT_TIMESTAMP()                 AS loaded_at
+    {{ current_timestamp_utc() }}                 AS loaded_at
 
 FROM {{ source('bronze', 'raw_countries') }}
 WHERE country_id IS NOT NULL

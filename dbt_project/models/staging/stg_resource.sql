@@ -8,7 +8,7 @@ SELECT
     TRIM(description)                   AS description,
     CAST(amount AS FLOAT)               AS amount,
     COALESCE(TRIM(currency), 'EUR')     AS currency,
-    CURRENT_TIMESTAMP()                 AS loaded_at
+    {{ current_timestamp_utc() }}                 AS loaded_at
 
 FROM {{ source('bronze', 'raw_resources') }}
 WHERE resource_id IS NOT NULL
