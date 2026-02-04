@@ -2,6 +2,8 @@
 
 **End-to-end data modeling and pipeline implementation for a multi-city EU Horizon 2020 sustainability project.**
 
+![ERD Overview](docs/erd/erd_event_participation.jpg)
+
 ## Project Context
 
 The [DivAirCity project](https://divaircity.eu/) (EU Horizon 2020, Grant No. 101003799) analysed diversity, inclusion, and air quality across 5 European pilot cities (Orvieto, Potsdam, Aarhus, Castellon, Bucharest) plus London as an additional data source. The project required a unified data framework to manage urban data spanning social, environmental, and economic domains.
@@ -30,7 +32,7 @@ Conceptual Model (BSI PAS 182)
         ▼
 ┌─────────────────────┐
 │   ERD / Data Model   │  ← docs/erd/
-│   22 entities,       │
+│   24 dims + 3 facts  │
 │   6 domains          │
 └─────────┬───────────┘
           │
@@ -102,13 +104,8 @@ Interactive Power BI dashboards built on top of the data model. See [`docs/dashb
 DivAirCity/
 ├── README.md
 ├── .gitignore
-├── data/
-│   └── raw/                             # Raw data sources (gitignored)
-│       ├── environmental/               # Emissions, air pollution, UHI
-│       ├── indicators/                  # KPI definitions
-│       ├── transportation/              # Cycling, walking data
-│       ├── health/                      # Health indicators
-│       └── carbon/                      # Decarbonization data
+├── data/raw/                            # ⛔ gitignored (not in repo)
+│   └── (local only: environmental, health, transportation data)
 ├── docs/
 │   ├── dashboards/
 │   │   └── data_map_exercise.pdf        # Power BI dashboard export
@@ -119,7 +116,7 @@ DivAirCity/
 │       └── original_diagrams/           # Original Miro diagrams
 ├── sql/
 │   ├── 01_create_schemas.sql            # Snowflake schema setup
-│   ├── 02_dimension_tables.sql          # 19 dimension tables
+│   ├── 02_dimension_tables.sql          # 24 dimension tables
 │   ├── 03_fact_tables.sql               # 3 fact tables
 │   └── 04_sample_queries.sql            # Analytical queries
 └── dbt_project/
@@ -205,6 +202,28 @@ The geographic hierarchy is normalised into separate dimension tables because:
 - **Intermediate:** Apply business logic, resolve relationships
 - **Marts (Gold):** Pre-joined wide tables optimised for BI tools and analysts
 
+## Quickstart
+
+```bash
+# 1. Set up Snowflake schemas (run in Snowflake worksheet)
+#    Execute: sql/01_create_schemas.sql
+#    Execute: sql/02_dimension_tables.sql
+#    Execute: sql/03_fact_tables.sql
+
+# 2. Configure dbt profile
+cp dbt_project/profiles.yml.example ~/.dbt/profiles.yml
+# Edit ~/.dbt/profiles.yml with your Snowflake credentials
+
+# 3. Install dbt dependencies & run
+cd dbt_project
+dbt deps
+dbt seed      # Load reference data (cities, countries, metrics)
+dbt run       # Build staging → intermediate → marts
+dbt test      # Validate data quality
+```
+
+> **Note:** Mock data is loaded via `dbt seed` from `dbt_project/seeds/`. No external data files required.
+
 ## Tech Stack
 
 - **Data Warehouse:** Snowflake
@@ -219,7 +238,3 @@ This repository is a **personal portfolio project** reconstructed from my work o
 - **Original work:** Conceptual data model and entity specifications (D2.2) designed during the project
 - **Portfolio reconstruction:** SQL DDL and dbt pipeline newly implemented for this portfolio to demonstrate end-to-end data engineering capabilities
 - **Data:** All data in this repo is **mock/synthetic data** — no real project data is included
-
----
-
-*This is a personal portfolio project based on my work during the DivAirCity project (EU Horizon 2020, Grant No. 101003799). All implementations and data in this repository are newly created for demonstration purposes.*
