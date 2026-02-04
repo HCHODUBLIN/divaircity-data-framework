@@ -1,5 +1,7 @@
 # DivAirCity Urban Data Framework
 
+![dbt CI](https://github.com/HCHODUBLIN/divaircity-data-framework/actions/workflows/dbt-ci.yml/badge.svg)
+
 **End-to-end data modeling and pipeline implementation for a multi-city EU Horizon 2020 sustainability project.**
 
 ![ERD Overview](docs/erd/erd_event_participation.jpg)
