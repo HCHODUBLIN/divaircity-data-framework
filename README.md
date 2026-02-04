@@ -34,29 +34,17 @@ The [DivAirCity project](https://divaircity.eu/) (EU Horizon 2020, Grant No. 101
 
 ```mermaid
 flowchart LR
-    subgraph Sources["🌍 6 Cities"]
-        direction TB
-        O[Orvieto]
-        P[Potsdam]
-        A[Aarhus]
-        C[Castellon]
-        B[Bucharest]
-        L[London]
-    end
+    Sources["🌍 6 Cities"]
 
     subgraph Pipeline["⚙️ Data Pipeline"]
-        direction LR
+        direction TB
         Bronze["🥉 Bronze<br/>27 raw tables"]
         Silver["🥈 Silver<br/>27 staging + 5 intermediate"]
         Gold["🥇 Gold<br/>6 marts"]
         Bronze --> Silver --> Gold
     end
 
-    subgraph Output["📊 Analytics"]
-        direction TB
-        PBI[Power BI]
-        API[Reports]
-    end
+    Output["📊 Power BI"]
 
     Sources --> Pipeline --> Output
 ```
